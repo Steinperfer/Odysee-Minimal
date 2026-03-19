@@ -1,4 +1,4 @@
-Odysee Minimal YOutube Style
+Odysee Minimal Youtube Style
 
 You need to download Tampermonkey, go to the add-on settings, and activate user scripts, then add the Odysee script. 
 As you can see, you now have the old-school thumbs-up and down icons and the colors are a bit more neutral.
