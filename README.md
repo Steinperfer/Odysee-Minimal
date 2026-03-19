@@ -11,6 +11,8 @@ I also removed this huge baner and the icon that always shows the wallet no one 
 .  
 .  
 <img width="2442" height="1272" alt="Screenshot 2026-03-19 153527" src="https://github.com/user-attachments/assets/79a0c8e0-3e5d-4716-a6d8-fcc1f20373be" />
+<img width="1639" height="906" alt="Screenshot 2026-03-19 164706" src="https://github.com/user-attachments/assets/5a8217ff-9155-4f88-8b93-e30f6822d288" />
+
 .  
 .  
 .  
