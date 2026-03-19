@@ -83,8 +83,12 @@
     }
     
     .button--membership {
-        background-color: #ffffff !important;
-        color: #000000 !important;
+        background: linear-gradient(to right, #888888, #ff6600) !important;
+        color: #ff6600 !important;
+    }
+    
+    .button--membership svg {
+        stroke: #ff6600 !important;
     }
     
     .button--link,
