@@ -166,6 +166,36 @@
     .button.button--alt:hover {
         background-color: #444444 !important;
     }
+    
+    /* File Action Button Hover */
+    .button.button--no-style.button--file-action:hover {
+        background-color: #444444 !important;
+    }
+    
+    /* Button Label Schrift weiß */
+    .button__label {
+        color: #ffffff !important;
+    }
+    
+    .button:hover .button__label {
+        color: #ffffff !important;
+    }
+    
+    /* Bestimmte Icons weiß lassen */
+    .icon--PlaylistAdd,
+    .icon--DollarSign,
+    .icon--Share2 {
+        stroke: #ffffff !important;
+    }
+    
+    /* More Icon - heller beim Hover */
+    .icon--More:hover {
+        stroke: #aaaaaa !important;
+    }
+    
+    .icon--More {
+        stroke: #ffffff !important;
+    }
     `;
 
     GM_addStyle(css);
