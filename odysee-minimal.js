@@ -65,11 +65,11 @@
         }
     }
     
-    /* Odysee Pink entfernen - alles weiß */
+    /* Odysee Pink entfernen - basis farben */
     :root {
-        --color-primary: #ffffff !important;
-        --color-odysee: #ffffff !important;
-        --color-primary-dynamic: #ffffff !important;
+        --color-primary: #333333 !important;
+        --color-odysee: #333333 !important;
+        --color-primary-dynamic: #333333 !important;
     }
     
     a, .link {
@@ -83,12 +83,12 @@
     }
     
     .button--membership {
-        background: linear-gradient(to right, #888888, #ff6600) !important;
-        color: #ff6600 !important;
+        background: linear-gradient(to right, #333333, #ff6600) !important;
+        color: #ffffff !important;
     }
     
     .button--membership svg {
-        stroke: #ff6600 !important;
+        stroke: #ffffff !important;
     }
     
     .button--link,
@@ -96,7 +96,9 @@
         color: #ffffff !important;
     }
     
-    .comment__author a {
+    .comment__author a,
+    .comment__author,
+    .comment .channel-name {
         color: #ffffff !important;
     }
     
@@ -107,8 +109,8 @@
     
     /* Kommentieren Button */
     .comment-create__btn {
-        background-color: #ffffff !important;
-        color: #000000 !important;
+        background-color: #333333 !important;
+        color: #ffffff !important;
     }
     
     /* Disabled Button */
@@ -145,6 +147,24 @@
     
     .button.button--alt.button-following svg {
         stroke: #ffffff !important;
+    }
+    
+    /* Channel Selector hover */
+    .channel-selector:hover {
+        background-color: #444444 !important;
+    }
+    
+    /* Alle Button Hovers auf grau statt weiß */
+    .button:hover {
+        background-color: #444444 !important;
+    }
+    
+    .button.button--primary:hover {
+        background-color: #444444 !important;
+    }
+    
+    .button.button--alt:hover {
+        background-color: #444444 !important;
     }
     `;
 
