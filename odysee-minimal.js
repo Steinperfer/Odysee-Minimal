@@ -22,7 +22,8 @@
     .wanderButton--connected,
     .featured-banner-wrapper,
     .featured-banner-image,
-    .claim-grid__wrapper.hide-ribbon {
+    .claim-grid__wrapper.hide-ribbon,
+    .header__navigationItem--balance {
         display: none !important;
     }
     
