@@ -3,7 +3,8 @@ Odysee Minimal Youtube Style Plugin
 You need to download Tampermonkey, go to the plugin settings, and activate user scripts for Tampermonkey, then add the Odysee script. 
 As you can see, you now have the old-school thumbs-up and down icons and the colors are a bit more neutral.
 
-<img width="2560" height="1288" alt="Screenshot 2026-03-19 153536" src="https://github.com/user-attachments/assets/0557f5a4-f929-489d-8eb8-565d0f67fd71" />
+<img width="2560" height="1282" alt="Screenshot 2026-03-19 162736" src="https://github.com/user-attachments/assets/6c63e705-99e6-4741-8ecf-7d50568f7638" />
+
 I also removed this huge baner and the icon that always shows the wallet no one uses and always reminds you that you dont have any money. 
 <img width="2560" height="1287" alt="Screenshot 2026-03-19 153552" src="https://github.com/user-attachments/assets/a046ed60-4c8c-4f68-b049-2b577769e502" />
 
