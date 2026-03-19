@@ -2,6 +2,7 @@
 
 You need to download Tampermonkey, go to the extensions settings, and activate user scripts for Tampermonkey, then add the Odysee script. 
 As you can see, you now have the old-school thumbs-up and down icons and the colors are a bit more neutral.
+https://addons.mozilla.org/de/firefox/addon/odysee-minimal-youtube-style/
 .    
 <img width="2560" height="1282" alt="Screenshot 2026-03-19 162736" src="https://github.com/user-attachments/assets/6c63e705-99e6-4741-8ecf-7d50568f7638" />
 .  
