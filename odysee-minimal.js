@@ -12,10 +12,6 @@
 (function() {
     'use strict';
 
-    // ============================================================
-    // CSS STYLES
-    // ============================================================
-    
     const css = `
     [class*="wanderButton"],
     .wanderButton,
@@ -65,7 +61,6 @@
         }
     }
     
-    /* Odysee Pink entfernen - basis farben */
     :root {
         --color-primary: #333333 !important;
         --color-odysee: #333333 !important;
@@ -102,24 +97,20 @@
         color: #ffffff !important;
     }
     
-    /* Links hover */
     a:hover {
         color: #cccccc !important;
     }
     
-    /* Kommentieren Button */
     .comment-create__btn {
         background-color: #333333 !important;
         color: #ffffff !important;
     }
     
-    /* Disabled Button */
     .button.button--primary.button--disabled {
         background-color: #333333 !important;
         color: #ffffff !important;
     }
     
-    /* Toggle Active - dunkelgrau mit weißer schrift */
     .button.button--alt.button-toggle.button-toggle--active {
         background-color: #666666 !important;
         color: #ffffff !important;
@@ -129,7 +120,6 @@
         stroke: #ffffff !important;
     }
     
-    /* Comment refresh button wenn aktiv */
     .button.button--alt.comment__refresh-button:hover {
         background-color: #666666 !important;
         color: #ffffff !important;
@@ -139,7 +129,6 @@
         stroke: #ffffff !important;
     }
     
-    /* Abonnieren Button - nicht abonniert */
     .button.button--alt.button-following {
         background-color: #333333 !important;
         color: #ffffff !important;
@@ -149,12 +138,10 @@
         stroke: #ffffff !important;
     }
     
-    /* Channel Selector hover */
     .channel-selector:hover {
         background-color: #444444 !important;
     }
     
-    /* Alle Button Hovers auf grau statt weiß */
     .button:hover {
         background-color: #444444 !important;
     }
@@ -167,12 +154,10 @@
         background-color: #444444 !important;
     }
     
-    /* File Action Button Hover */
     .button.button--no-style.button--file-action:hover {
         background-color: #444444 !important;
     }
     
-    /* Button Label Schrift weiß */
     .button__label {
         color: #ffffff !important;
     }
@@ -181,14 +166,12 @@
         color: #ffffff !important;
     }
     
-    /* Bestimmte Icons weiß lassen */
     .icon--PlaylistAdd,
     .icon--DollarSign,
     .icon--Share2 {
         stroke: #ffffff !important;
     }
     
-    /* More Icon - heller beim Hover */
     .icon--More:hover {
         stroke: #aaaaaa !important;
     }
@@ -196,13 +179,27 @@
     .icon--More {
         stroke: #ffffff !important;
     }
+    
+    /* Tab Schrift immer weiß */
+    .tab {
+        color: #ffffff !important;
+    }
+    
+    .tab:hover {
+        color: #ffffff !important;
+    }
+    
+    /* Truncated text Schrift immer weiß */
+    .truncated-text {
+        color: #ffffff !important;
+    }
+    
+    .truncated-text:hover {
+        color: #ffffff !important;
+    }
     `;
 
     GM_addStyle(css);
-    
-    // ============================================================
-    // DAUMEN ICONS ERSETZEN
-    // ============================================================
     
     const THUMB_UP_PATH = 'M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3';
     
