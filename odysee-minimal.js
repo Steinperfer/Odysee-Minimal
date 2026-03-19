@@ -65,65 +65,82 @@
         }
     }
     
-    .navigation,
-    .navigation--micro,
-    .navigation--push,
-    .navigation__wrapper {
-        background-color: #1a1a1a !important;
+    /* Odysee Pink entfernen - alles weiß */
+    :root {
+        --color-primary: #ffffff !important;
+        --color-odysee: #ffffff !important;
+        --color-primary-dynamic: #ffffff !important;
     }
     
-    .navigation-link--active {
-        background-color: #333333 !important;
+    a, .link {
+        color: #ffffff !important;
     }
     
+    .button.button--primary:not(.button--disabled),
     .subscribeButton {
         background-color: #333333 !important;
         color: #ffffff !important;
     }
     
-    .button-following {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
     .button--membership {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+    
+    .button--link,
+    .button--no-style {
+        color: #ffffff !important;
+    }
+    
+    .comment__author a {
+        color: #ffffff !important;
+    }
+    
+    /* Links hover */
+    a:hover {
+        color: #cccccc !important;
+    }
+    
+    /* Kommentieren Button */
+    .comment-create__btn {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+    
+    /* Disabled Button */
+    .button.button--primary.button--disabled {
         background-color: #333333 !important;
         color: #ffffff !important;
     }
     
-    .button--alt {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    .button--primary {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    .comment__sort .button {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    .claim-preview__progress-bar {
+    /* Toggle Active - dunkelgrau mit weißer schrift */
+    .button.button--alt.button-toggle.button-toggle--active {
         background-color: #666666 !important;
+        color: #ffffff !important;
     }
     
-    .claim-preview__wrapper--live .claim-preview__file-property-overlay {
+    .button.button--alt.button-toggle.button-toggle--active svg {
+        stroke: #ffffff !important;
+    }
+    
+    /* Comment refresh button wenn aktiv */
+    .button.button--alt.comment__refresh-button:hover {
+        background-color: #666666 !important;
+        color: #ffffff !important;
+    }
+    
+    .button.button--alt.comment__refresh-button:hover svg {
+        stroke: #ffffff !important;
+    }
+    
+    /* Abonnieren Button - nicht abonniert */
+    .button.button--alt.button-following {
         background-color: #333333 !important;
         color: #ffffff !important;
     }
     
-    .tag {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    :root {
-        --color-primary: #333333 !important;
-        --color-primary-dynamic: #333333 !important;
-        --color-odysee: #333333 !important;
+    .button.button--alt.button-following svg {
+        stroke: #ffffff !important;
     }
     `;
 
