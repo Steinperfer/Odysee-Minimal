@@ -9,7 +9,7 @@ As you can see, you now have the old-school thumbs-up and down icons and the col
 <img width="2560" height="1282" alt="Screenshot 2026-03-19 162736" src="https://github.com/user-attachments/assets/6c63e705-99e6-4741-8ecf-7d50568f7638" />
 .  
 . 
-i also fixes how videos get displayed on WQHD and 4k
+i also fixed how videos get displayed on WQHD and 4k
 <img width="2560" height="1288" alt="Screenshot 2026-03-20 230927" src="https://github.com/user-attachments/assets/1b1e42d7-7403-4955-9614-434ce6d9b203" />
 .  
 .  
