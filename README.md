@@ -8,8 +8,12 @@ As you can see, you now have the old-school thumbs-up and down icons and the col
 .    
 <img width="2560" height="1282" alt="Screenshot 2026-03-19 162736" src="https://github.com/user-attachments/assets/6c63e705-99e6-4741-8ecf-7d50568f7638" />
 .  
+. 
+i also fixes how videos get displayed on WQHD and 4k
+<img width="2560" height="1288" alt="Screenshot 2026-03-20 230927" src="https://github.com/user-attachments/assets/1b1e42d7-7403-4955-9614-434ce6d9b203" />
 .  
-I also removed this huge baner and the icon that always shows the wallet no one uses and always reminds you that you dont have any money. 
+.  
+and removed this huge baner and the icon that always shows the wallet no one uses and always reminds you that you dont have any money. 
 <img width="2560" height="1287" alt="Screenshot 2026-03-19 153552" src="https://github.com/user-attachments/assets/a046ed60-4c8c-4f68-b049-2b577769e502" />
 .  
 .  
