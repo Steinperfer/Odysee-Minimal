@@ -1,8 +1,20 @@
 # Odysee Minimal Youtube Style Plugin
 
-You need to download Tampermonkey, go to the extensions settings, and activate user scripts for Tampermonkey, then add the Odysee script. 
+#Chrome, 
+1. Search chrome://extensions 
+2. Enable Developer mode  
+3. Click on Load unpacked 
+4. Select the Chrome folder
+   
+#Firefox, 
 https://addons.mozilla.org/de/firefox/addon/odysee-minimal-youtube-style/  
+if this link does not work you have to load it temporary on every start
+1. Search about:debugging#/runtime/this-firefox
+2. Click on Load Temporary Add-on
+3. Select the firefox .ZIP file
 
+
+  
 As you can see, you now have the old-school thumbs-up and down icons and the colors are a bit more neutral.  
 
 .    
