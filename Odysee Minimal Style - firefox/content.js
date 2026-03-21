@@ -39,31 +39,140 @@
     @media (max-width: 1200px) { .claim-grid ul li, .claim-preview--tile { width: calc(50% - 8px) !important; } }
     @media (max-width: 700px) { .claim-grid ul li, .claim-preview--tile { width: calc(100% - 16px) !important; } }
 
-    :root { --color-primary: #333333 !important; --color-odysee: #333333 !important; --color-primary-dynamic: #333333 !important; }
-
-    a, .link { color: #ffffff !important; }
+    :root {
+        --color-primary: #333333 !important;
+        --color-odysee: #333333 !important;
+        --color-primary-dynamic: #333333 !important;
+    }
+    
+    a, .link {
+        color: #ffffff !important;
+    }
+    
     .button.button--primary:not(.button--disabled),
-    .subscribeButton { background-color: #333333 !important; color: #ffffff !important; }
-    .button--membership { background: linear-gradient(to right, #333333, #ff6600) !important; color: #ffffff !important; }
-    .button--membership svg { stroke: #ffffff !important; }
-    .button--link, .button--no-style { color: #ffffff !important; }
-    .comment__author a, .comment__author, .comment .channel-name { color: #ffffff !important; }
-    a:hover { color: #cccccc !important; }
-    .comment-create__btn { background-color: #333333 !important; color: #ffffff !important; }
-    .button.button--primary.button--disabled { background-color: #333333 !important; color: #ffffff !important; }
-    .button.button--alt.button-toggle.button-toggle--active { background-color: #666666 !important; color: #ffffff !important; }
-    .button.button--alt.button-toggle.button-toggle--active svg { stroke: #ffffff !important; }
-    .button.button--alt.comment__refresh-button:hover { background-color: #666666 !important; color: #ffffff !important; }
-    .button.button--alt.comment__refresh-button:hover svg { stroke: #ffffff !important; }
-    .button.button--alt.button-following { background-color: #333333 !important; color: #ffffff !important; }
-    .button.button--alt.button-following svg { stroke: #ffffff !important; }
-    .channel-selector:hover { background-color: #444444 !important; }
-    .button:hover, .button.button--primary:hover, .button.button--alt:hover, .button.button--no-style.button--file-action:hover { background-color: #444444 !important; }
-    .button__label, .button:hover .button__label { color: #ffffff !important; }
-    .icon--PlaylistAdd, .icon--DollarSign, .icon--Share2 { stroke: #ffffff !important; }
-    .icon--More:hover { stroke: #aaaaaa !important; }
-    .icon--More { stroke: #ffffff !important; }
-    .tab, .tab:hover, .truncated-text, .truncated-text:hover { color: #ffffff !important; }
+    .subscribeButton {
+        background-color: #333333 !important;
+        color: #ffffff !important;
+    }
+    
+    .button--membership {
+        background: linear-gradient(to right, #333333, #ff6600) !important;
+        color: #ffffff !important;
+    }
+    
+    .button--membership svg {
+        stroke: #ffffff !important;
+    }
+    
+    .button--link,
+    .button--no-style {
+        color: #ffffff !important;
+    }
+    
+    .comment__author a,
+    .comment__author,
+    .comment .channel-name {
+        color: #ffffff !important;
+    }
+    
+    a:hover {
+        color: #cccccc !important;
+    }
+    
+    .comment-create__btn {
+        background-color: #333333 !important;
+        color: #ffffff !important;
+    }
+    
+    .button.button--primary.button--disabled {
+        background-color: #333333 !important;
+        color: #ffffff !important;
+    }
+    
+    .button.button--alt.button-toggle.button-toggle--active {
+        background-color: #666666 !important;
+        color: #ffffff !important;
+    }
+    
+    .button.button--alt.button-toggle.button-toggle--active svg {
+        stroke: #ffffff !important;
+    }
+    
+    .button.button--alt.comment__refresh-button:hover {
+        background-color: #666666 !important;
+        color: #ffffff !important;
+    }
+    
+    .button.button--alt.comment__refresh-button:hover svg {
+        stroke: #ffffff !important;
+    }
+    
+    .button.button--alt.button-following {
+        background-color: #333333 !important;
+        color: #ffffff !important;
+    }
+    
+    .button.button--alt.button-following svg {
+        stroke: #ffffff !important;
+    }
+    
+    .channel-selector:hover {
+        background-color: #444444 !important;
+    }
+    
+    .button:hover {
+        background-color: #444444 !important;
+    }
+    
+    .button.button--primary:hover {
+        background-color: #444444 !important;
+    }
+    
+    .button.button--alt:hover {
+        background-color: #444444 !important;
+    }
+    
+    .button.button--no-style.button--file-action:hover {
+        background-color: #444444 !important;
+    }
+    
+    .button__label {
+        color: #ffffff !important;
+    }
+    
+    .button:hover .button__label {
+        color: #ffffff !important;
+    }
+    
+    .icon--PlaylistAdd,
+    .icon--DollarSign,
+    .icon--Share2 {
+        stroke: #ffffff !important;
+    }
+    
+    .icon--More:hover {
+        stroke: #aaaaaa !important;
+    }
+    
+    .icon--More {
+        stroke: #ffffff !important;
+    }
+    
+    .tab {
+        color: #ffffff !important;
+    }
+    
+    .tab:hover {
+        color: #ffffff !important;
+    }
+    
+    .truncated-text {
+        color: #ffffff !important;
+    }
+    
+    .truncated-text:hover {
+        color: #ffffff !important;
+    }
     `;
     document.head.appendChild(styleMinimal);
 
