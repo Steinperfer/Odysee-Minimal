@@ -18,8 +18,8 @@
       height: 100% !important;
     }
     .video-js video, .vjs-poster {
-      height: 100% !important;
-      object-fit: cover;
+      height: 130% !important;
+      object-fit: contain;
     }
     .section.card-stack.file-page__video {
       margin-left: 0 !important;
