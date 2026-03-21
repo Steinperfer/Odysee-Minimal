@@ -7,6 +7,7 @@
 4. Select the Chrome folder
    
 #Firefox, 
+
 https://addons.mozilla.org/de/firefox/addon/odysee-minimal-youtube-style/  
 if this link does not work you have to load it temporary on every start
 1. Search about:debugging#/runtime/this-firefox
