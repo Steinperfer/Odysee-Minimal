@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Odysee Layout + Minimal Combined
+// @name         Odysee Layout + Minimal Combined OLD VERSON DOWNLOAD THE ADDON 
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Beide Scripts kombiniert, GM_addStyle Problem behoben
