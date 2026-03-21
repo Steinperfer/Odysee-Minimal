@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Odysee Layout + Minimal Combined
+// @name         Odysee Layout + Minimal Combined (kein Video Player)
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Beide Scripts kombiniert, GM_addStyle Problem behoben
+// @version      1.1
+// @description  Beide Scripts kombiniert, Video-Player Anpassungen entfernt
 // @match        *://odysee.com/*
 // @match        *://*.odysee.com/*
 // @grant        none
@@ -45,138 +45,39 @@
         --color-primary-dynamic: #333333 !important;
     }
     
-    a, .link {
-        color: #ffffff !important;
-    }
-    
-    .button.button--primary:not(.button--disabled),
-    .subscribeButton {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    .button--membership {
-        background: linear-gradient(to right, #333333, #ff6600) !important;
-        color: #ffffff !important;
-    }
-    
-    .button--membership svg {
-        stroke: #ffffff !important;
-    }
-    
-    .button--link,
-    .button--no-style {
-        color: #ffffff !important;
-    }
-    
-    .comment__author a,
-    .comment__author,
-    .comment .channel-name {
-        color: #ffffff !important;
-    }
-    
-    a:hover {
-        color: #cccccc !important;
-    }
-    
-    .comment-create__btn {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    .button.button--primary.button--disabled {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    .button.button--alt.button-toggle.button-toggle--active {
-        background-color: #666666 !important;
-        color: #ffffff !important;
-    }
-    
-    .button.button--alt.button-toggle.button-toggle--active svg {
-        stroke: #ffffff !important;
-    }
-    
-    .button.button--alt.comment__refresh-button:hover {
-        background-color: #666666 !important;
-        color: #ffffff !important;
-    }
-    
-    .button.button--alt.comment__refresh-button:hover svg {
-        stroke: #ffffff !important;
-    }
-    
-    .button.button--alt.button-following {
-        background-color: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    .button.button--alt.button-following svg {
-        stroke: #ffffff !important;
-    }
-    
-    .channel-selector:hover {
-        background-color: #444444 !important;
-    }
-    
-    .button:hover {
-        background-color: #444444 !important;
-    }
-    
-    .button.button--primary:hover {
-        background-color: #444444 !important;
-    }
-    
-    .button.button--alt:hover {
-        background-color: #444444 !important;
-    }
-    
-    .button.button--no-style.button--file-action:hover {
-        background-color: #444444 !important;
-    }
-    
-    .button__label {
-        color: #ffffff !important;
-    }
-    
-    .button:hover .button__label {
-        color: #ffffff !important;
-    }
-    
-    .icon--PlaylistAdd,
-    .icon--DollarSign,
-    .icon--Share2 {
-        stroke: #ffffff !important;
-    }
-    
-    .icon--More:hover {
-        stroke: #aaaaaa !important;
-    }
-    
-    .icon--More {
-        stroke: #ffffff !important;
-    }
-    
-    .tab {
-        color: #ffffff !important;
-    }
-    
-    .tab:hover {
-        color: #ffffff !important;
-    }
-    
-    .truncated-text {
-        color: #ffffff !important;
-    }
-    
-    .truncated-text:hover {
-        color: #ffffff !important;
-    }
+    a, .link { color: #ffffff !important; }
+    .button.button--primary:not(.button--disabled), .subscribeButton { background-color: #333333 !important; color: #ffffff !important; }
+    .button--membership { background: linear-gradient(to right, #333333, #ff6600) !important; color: #ffffff !important; }
+    .button--membership svg { stroke: #ffffff !important; }
+    .button--link, .button--no-style { color: #ffffff !important; }
+    .comment__author a, .comment__author, .comment .channel-name { color: #ffffff !important; }
+    a:hover { color: #cccccc !important; }
+    .comment-create__btn { background-color: #333333 !important; color: #ffffff !important; }
+    .button.button--primary.button--disabled { background-color: #333333 !important; color: #ffffff !important; }
+    .button.button--alt.button-toggle.button-toggle--active { background-color: #666666 !important; color: #ffffff !important; }
+    .button.button--alt.button-toggle.button-toggle--active svg { stroke: #ffffff !important; }
+    .button.button--alt.comment__refresh-button:hover { background-color: #666666 !important; color: #ffffff !important; }
+    .button.button--alt.comment__refresh-button:hover svg { stroke: #ffffff !important; }
+    .button.button--alt.button-following { background-color: #333333 !important; color: #ffffff !important; }
+    .button.button--alt.button-following svg { stroke: #ffffff !important; }
+    .channel-selector:hover { background-color: #444444 !important; }
+    .button:hover { background-color: #444444 !important; }
+    .button.button--primary:hover { background-color: #444444 !important; }
+    .button.button--alt:hover { background-color: #444444 !important; }
+    .button.button--no-style.button--file-action:hover { background-color: #444444 !important; }
+    .button__label { color: #ffffff !important; }
+    .button:hover .button__label { color: #ffffff !important; }
+    .icon--PlaylistAdd, .icon--DollarSign, .icon--Share2 { stroke: #ffffff !important; }
+    .icon--More:hover { stroke: #aaaaaa !important; }
+    .icon--More { stroke: #ffffff !important; }
+    .tab { color: #ffffff !important; }
+    .tab:hover { color: #ffffff !important; }
+    .truncated-text { color: #ffffff !important; }
+    .truncated-text:hover { color: #ffffff !important; }
     `;
     document.head.appendChild(styleMinimal);
 
-    // --- Layout V2 Script CSS ---
+    // --- Layout V2 Script CSS (ohne Video Player) ---
     const styleLayout = document.createElement('style');
     styleLayout.textContent = `
     html, body,
@@ -193,28 +94,6 @@
       max-width: 100% !important;
     }
 
-    .content__viewer.content__viewer--inline { height: 80vh !important; max-height: none !important; display: block !important; }
-
-    .file-render.file-render--video,
-    .file-viewer,
-    .video-js-parent,
-    .video-js { height: 100% !important; }
-
-    .video-js video,
-    .vjs-poster { height: 100% !important; object-fit: cover; }
-
-    .section.card-stack.file-page__video { margin-left: 0 !important; padding-left: 0 !important; }
-    .card-stack--spacing-m, .card__body.card__body--list { margin-right: 0 !important; padding-right: 0 !important; }
-
-    .footer, .navigation__tertiary.footer__links {
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      text-align: left !important;
-      clear: both !important;
-      display: block !important;
-      float: none !important;
-      position: relative !important;
-    }
     `;
     document.head.appendChild(styleLayout);
 
@@ -231,31 +110,10 @@
         });
     }
 
-    setTimeout(replaceThumbs, 500);
-    setTimeout(replaceThumbs, 1500);
-    setTimeout(replaceThumbs, 3000);
 
     const observerThumbs = new MutationObserver(replaceThumbs);
     observerThumbs.observe(document.body, { childList: true, subtree: true });
+ 
 
-    // --- Footer/Layout Fix ---
-    function layoutFix() {
-        const footer = document.querySelector('.navigation__tertiary.footer__links, .footer');
-        if (footer && footer.parentNode) {
-            footer.parentNode.removeChild(footer);
-            document.body.appendChild(footer);
-        }
-    }
-
-    if (layoutFix()) console.log('[Layout Fix] Applied');
-
-    const observerLayout = new MutationObserver(() => {
-        clearTimeout(window.odyseeLayoutV2Timeout);
-        window.odyseeLayoutV2Timeout = setTimeout(layoutFix, 200);
-    });
-    observerLayout.observe(document.body, { childList: true, subtree: true });
-    setTimeout(layoutFix, 500);
-
-    console.log('[Odysee Combined Script] Activated');
 
 })();
