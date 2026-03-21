@@ -48,6 +48,8 @@
   // 2. Footer direkt unter die gewünschte Klasse klatschen
   const target = document.querySelector('.main-wrapper__inner--filepage');
   const footer = document.querySelector('.footer');
-
+  if (target && footer) {
+    target.appendChild(footer);
+  }
 
 })();
