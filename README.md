@@ -5,6 +5,8 @@
 2. Enable Developer mode  
 3. Click on Load unpacked 
 4. Select the Chrome folder
+  
+  
    
 #Firefox, 
 
