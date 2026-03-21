@@ -1,102 +1,56 @@
-(function(){
+(function() {
   'use strict';
 
+  // 1. Dein Original-Layout (unverändert)
   const css = `
-    html, body,
-    .sidebar--pusher, 
-    .sidebar--pusher--filepage, 
-    .main-wrapper--filepage, 
-    .main-wrapper,
-    .page__page,
-    .page__content,
-    .file-page {
-
+    html, body, .sidebar--pusher, .sidebar--pusher--filepage, 
+    .main-wrapper--filepage, .main-wrapper, .page__page, 
+    .page__content, .file-page {
       width: 100% !important;
       max-width: 100% !important;
     }
-
-    .content__viewer.content__viewer--inline{
+    .content__viewer.content__viewer--inline {
        height: 80vh !important;
        max-height: none !important;
        display: block !important;
-     }
-
-    .file-render.file-render--video,
-    .file-viewer,
-    .video-js-parent,
-    .video-js {
+    }
+    .file-render.file-render--video, .file-viewer, .video-js-parent, .video-js {
       height: 100% !important;
     }
-
-    .video-js video,
-    .vjs-poster {
+    .video-js video, .vjs-poster {
       height: 100% !important;
       object-fit: cover;
     }
-
     .section.card-stack.file-page__video {
       margin-left: 0 !important;
       padding-left: 0 !important;
     }
-
-    .card-stack--spacing-m,
-    .card__body.card__body--list {
+    .card-stack--spacing-m, .card__body.card__body--list {
       margin-right: 0 !important;
       padding-right: 0 !important;
     }
-
-    .footer,
-    .navigation__tertiary.footer__links {
+    .footer {
       margin-left: 0 !important;
-      padding-left: 0 !important;
+      padding-top: 40px !important;
       text-align: left !important;
-      clear: both !important;
       display: block !important;
-      float: none !important;
-      position: relative !important;
+      clear: both !important;
+      width: 100% !important;
     }
+    /* Das hier killt den zweiten Footer sofort per CSS, falls er auftaucht */
+    .footer ~ .footer { display: none !important; }
   `;
 
-  // GM_addStyle ersetzt für normalen Browser
   const style = document.createElement('style');
   style.textContent = css;
   document.head.appendChild(style);
 
-  function layout() {
-    const mainContainer = document.querySelector('.sidebar--pusher--filepage');
-    if (!mainContainer) return false;
+  // 2. Footer direkt unter die gewünschte Klasse klatschen
+  const target = document.querySelector('.main-wrapper__inner--filepage');
+  const footer = document.querySelector('.footer');
 
-    const footer = document.querySelector('.navigation__tertiary.footer__links, .footer');
-    if (footer && footer.parentNode) {
-      footer.parentNode.removeChild(footer);
-      document.body.appendChild(footer);
-    }
-
-    return true;
+  if (target && footer) {
+    target.appendChild(footer);
   }
-
-  if (layout()) console.log('[Odysee Layout V2] Applied');
-
-  const observer = new MutationObserver((mutations) => {
-    let needsUpdate = false;
-    for (const m of mutations) {
-      if (m.type === 'childList') {
-        needsUpdate = true;
-        break;
-      }
-    }
-    if (needsUpdate) {
-      clearTimeout(window.odyseeLayoutV2Timeout);
-      window.odyseeLayoutV2Timeout = setTimeout(() => {
-        if (layout()) console.log('[Odysee Layout V2] Updated');
-      }, 200);
-    }
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
-
-  setTimeout(() => {
-    layout();
-  }, 500);
 
 })();
