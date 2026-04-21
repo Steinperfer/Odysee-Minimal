@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Odysee Minimal",
-  "version": "3.6",
+  "version": "3.8",
   "description": "Odysee minimal YouTube Style",
   "permissions": [],
   "content_scripts": [
@@ -10,9 +10,7 @@
         "*://odysee.com/*",
         "*://*.odysee.com/*"
       ],
-      "js": [
-        "content.js"
-      ],
+      "js": ["content.js"],
       "run_at": "document_idle"
     },
     {
@@ -26,22 +24,14 @@
         "*://odysee.com/?*",
         "*://*.odysee.com/?*"
       ],
-      "js": [
-        "odyseeresize.js"
-      ],
+      "js": ["odyseeresize.js"],
       "run_at": "document_idle"
     }
   ],
   "browser_specific_settings": {
     "gecko": {
       "id": "odysee-minimal@local",
-      "strict_min_version": "142.0",
-      "data_collection_permissions": {
-        "telemetry": "none",
-        "required": [
-          "none"
-        ]
-      }
+      "strict_min_version": "142.0"
     }
   }
 }
