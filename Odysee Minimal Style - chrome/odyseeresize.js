@@ -55,19 +55,10 @@
       }
       .footer ~ .footer { display: none !important; }
 
-      /* Mehr Platz links/rechts */
+      /* Padding links und rechts */
       .file-page {
-        padding-left: 4% !important;
-        padding-right: 4% !important;
-      }
-      
-      .file-page__secondary-content {
-        margin-top: 0 !important;
-      }
-
-      .file-render--video, .file-viewer, .video-js-parent, .video-js {
-        width: 100% !important;
-        max-width: 100% !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
       }
     `;
 

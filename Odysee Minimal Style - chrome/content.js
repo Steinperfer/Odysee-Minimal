@@ -193,15 +193,15 @@
       max-width: 100% !important;
     }
 
-    .content__viewer.content__viewer--inline { height: 80vh !important; max-height: none !important; display: block !important; }
+    .content__viewer.content__viewer--inline { max-width: 100% !important; display: block !important; }
 
     .file-render.file-render--video,
     .file-viewer,
     .video-js-parent,
-    .video-js { height: 100% !important; }
+    .video-js { max-width: 100% !important; }
 
     .video-js video,
-    .vjs-poster { height: 100% !important; object-fit: cover; }
+    .vjs-poster { max-width: 100% !important; object-fit: contain; }
 
     .section.card-stack.file-page__video { margin-left: 0 !important; padding-left: 0 !important; }
     .card-stack--spacing-m, .card__body.card__body--list { margin-right: 0 !important; padding-right: 0 !important; }
