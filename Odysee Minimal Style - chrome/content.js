@@ -205,16 +205,6 @@
 
     .section.card-stack.file-page__video { margin-left: 0 !important; padding-left: 0 !important; }
     .card-stack--spacing-m, .card__body.card__body--list { margin-right: 0 !important; padding-right: 0 !important; }
-
-    .footer, .navigation__tertiary.footer__links {
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      text-align: left !important;
-      clear: both !important;
-      display: block !important;
-      float: none !important;
-      position: relative !important;
-    }
     `;
     document.head.appendChild(styleLayout);
 
@@ -238,23 +228,46 @@
     const observerThumbs = new MutationObserver(replaceThumbs);
     observerThumbs.observe(document.body, { childList: true, subtree: true });
 
-    // --- Footer/Layout Fix ---
-    function layoutFix() {
-        const footer = document.querySelector('.navigation__tertiary.footer__links, .footer');
-        if (footer && footer.parentNode) {
-            footer.parentNode.removeChild(footer);
-            document.body.appendChild(footer);
+    // --- Shorts-Seite erkennen ---
+    function isShortsPage() {
+        return window.location.href.includes('view=shorts') || 
+               window.location.pathname.includes('/shorts');
+    }
+
+    const styleShorts = document.createElement('style');
+    styleShorts.textContent = `
+        .navigation__tertiary.footer__links, .footer { display: none !important; }
+    `;
+    document.head.appendChild(styleShorts);
+
+    // --- Arrow Keys für Shorts ---
+    function handleArrowKeys(e) {
+        if (!isShortsPage()) return;
+        if (e.key === 'ArrowDown') {
+            const nextBtn = document.querySelector('.shorts-page__actions-button--next');
+            if (nextBtn) nextBtn.click();
+        } else if (e.key === 'ArrowUp') {
+            const prevBtn = document.querySelector('.shorts-page__actions-button--previous');
+            if (prevBtn) prevBtn.click();
         }
     }
 
-    if (layoutFix()) console.log('[Layout Fix] Applied');
+    document.addEventListener('keydown', handleArrowKeys);
 
-    const observerLayout = new MutationObserver(() => {
-        clearTimeout(window.odyseeLayoutV2Timeout);
-        window.odyseeLayoutV2Timeout = setTimeout(layoutFix, 200);
-    });
-    observerLayout.observe(document.body, { childList: true, subtree: true });
-    setTimeout(layoutFix, 500);
+    // --- media-hd-badge rot ---
+    const styleMediaHd = document.createElement('style');
+    styleMediaHd.textContent = `
+        .media-hd-badge { background-color: #ef4444 !important; color: #fff !important; }
+    `;
+    document.head.appendChild(styleMediaHd);
+
+    // --- Button Bubble Farben ---
+    const styleCustomColors = document.createElement('style');
+    styleCustomColors.textContent = `
+        .button.button--no-style.button-bubble.button-bubble--active { background-color: #2a2a2a !important; }
+        .button.button--no-style.button-bubble:not(.button-bubble--active) { background-color: #1a1a1a !important; }
+    `;
+    document.head.appendChild(styleCustomColors);
 
     console.log('[Odysee Combined Script] Activated');
 
