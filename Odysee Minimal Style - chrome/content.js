@@ -39,24 +39,32 @@
     @media (max-width: 1200px) { .claim-grid ul li, .claim-preview--tile { width: calc(50% - 8px) !important; } }
     @media (max-width: 700px) { .claim-grid ul li, .claim-preview--tile { width: calc(100% - 16px) !important; } }
 
-    :root {
-        --color-primary: #333333 !important;
-        --color-odysee: #333333 !important;
-        --color-primary-dynamic: #333333 !important;
+:root {
+        --color-primary: #de0050 !important;
+        --color-odysee: #de0050 !important;
+        --color-primary-dynamic: #de0050 !important;
     }
     
-    a, .link {
-        color: #ffffff !important;
+a, .link {
+        color: #de0050 !important;
+    }
+    
+    a:hover {
+        color: #ff3377 !important;
+    }
+    
+    .button--external-link-wrap .button__label {
+        color: #de0050 !important;
     }
     
     .button.button--primary:not(.button--disabled),
     .subscribeButton {
-        background-color: #333333 !important;
+        background-color: #de0050 !important;
         color: #ffffff !important;
     }
     
     .button--membership {
-        background: linear-gradient(to right, #333333, #ff6600) !important;
+        background: linear-gradient(to right, #de0050, #ff6600) !important;
         color: #ffffff !important;
     }
     
@@ -80,12 +88,12 @@
     }
     
     .comment-create__btn {
-        background-color: #333333 !important;
+        background-color: #de0050 !important;
         color: #ffffff !important;
     }
     
     .button.button--primary.button--disabled {
-        background-color: #333333 !important;
+        background-color: #de0050 !important;
         color: #ffffff !important;
     }
     
@@ -108,6 +116,12 @@
     }
     
     .button.button--alt.button-following {
+        background-color: #de0050 !important;
+        color: #ffffff !important;
+    }
+    
+    .button.button--alt.button-following.button-following--active,
+    .button-group {
         background-color: #333333 !important;
         color: #ffffff !important;
     }
@@ -261,6 +275,21 @@
     `;
     document.head.appendChild(styleMediaHd);
 
+    // --- 2-Farben Gradient entfernen - NUR diese Hauptklassen ---
+    const styleGradientFix = document.createElement('style');
+    styleGradientFix.textContent = `
+        .home__meme .button__content {
+            background-image: none !important;
+            background-color: #de0050 !important;
+        }
+        .button.button--alt.button--membership {
+            background-image: none !important;
+            background-color: #de0050 !important;
+            filter: none !important;
+        }
+    `;
+    document.head.appendChild(styleGradientFix);
+
     // --- Button Bubble Farben ---
     const styleCustomColors = document.createElement('style');
     styleCustomColors.textContent = `
@@ -268,6 +297,61 @@
         .button.button--no-style.button-bubble:not(.button-bubble--active) { background-color: #1a1a1a !important; }
     `;
     document.head.appendChild(styleCustomColors);
+
+    // --- Video Bar Farbe - NUR gespielt + Thumb ---
+    const styleVideoBar = document.createElement('style');
+    styleVideoBar.textContent = `
+        .odysee-slider__fill,
+        .odysee-slider__fill::before,
+        .odysee-slider__fill::after,
+        .media-slider__fill,
+        .media-slider__fill::before,
+        .media-slider__fill::after,
+        .odysee-time-slider .odysee-slider__fill,
+        .odysee-time-slider .media-slider__fill,
+        .odysee-progress-bar .odysee-slider__fill,
+        .odysee-progress-bar .media-slider__fill {
+            background: #de0050 !important;
+            background-image: none !important;
+            background-color: #de0050 !important;
+        }
+        .odysee-slider__thumb,
+        .odysee-slider__thumb::before,
+        .odysee-slider__thumb::after,
+        .media-slider__thumb,
+        .media-slider__thumb::before,
+        .media-slider__thumb::after,
+        .odysee-time-slider .odysee-slider__thumb,
+        .odysee-time-slider .media-slider__thumb,
+        .odysee-progress-bar .odysee-slider__thumb,
+        .odysee-progress-bar .media-slider__thumb {
+            background: #de0050 !important;
+            background-image: none !important;
+            background-color: #de0050 !important;
+            opacity: 1 !important;
+        }
+        ::selection {
+            background-color: #de0050 !important;
+            color: #ffffff !important;
+        }
+        a, .link {
+            color: #de0050 !important;
+        }
+    `;
+    document.head.appendChild(styleVideoBar);
+
+    // JavaScript to fix inline styles - NUR fill UND thumb - mit MutationObserver
+    function fixVideoBarInline() {
+        document.querySelectorAll('.odysee-slider__fill, .media-slider__fill, .odysee-slider__thumb, .media-slider__thumb, .claim-preview__progress-bar').forEach(el => {
+            el.style.setProperty('background', '#de0050', 'important');
+            el.style.setProperty('background-color', '#de0050', 'important');
+            el.style.setProperty('background-image', 'none', 'important');
+        });
+    }
+    
+    // MutationObserver statt setInterval
+    const observerVideoBar = new MutationObserver(fixVideoBarInline);
+    observerVideoBar.observe(document.body, { childList: true, subtree: true });
 
     console.log('[Odysee Combined Script] Activated');
 
