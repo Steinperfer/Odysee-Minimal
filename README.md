@@ -26,11 +26,12 @@ As you can see, you now have the old-school thumbs-up and down icons and the col
 .  
 . 
 i also fixed how videos get displayed on WQHD and 4k  
-<img width="1428" height="861" alt="Screenshot 2026-04-22 222712" src="https://github.com/user-attachments/assets/e250fcc8-2f1b-4add-8f8c-2a955d4f13ca" />
+<img width="2546" height="1277" alt="Screenshot 2026-04-22 223643" src="https://github.com/user-attachments/assets/5600bf1f-060c-4e38-95f5-15d54b95393d" />
+.  
+.  
+and removed this huge baner and the icon that always shows the wallet no one uses and always reminds you that you dont have any money.
+<img width="1428" height="861" alt="Screenshot 2026-04-22 222712" src="https://github.com/user-attachments/assets/b8e5ec73-5ecc-4701-b018-66b0f1b6cb00" />
 
-.  
-.  
-and removed this huge baner and the icon that always shows the wallet no one uses and always reminds you that you dont have any money. 
 . 
 You also can use the arrow keys now to scroll shorts  
 <img width="2442" height="1272" alt="Screenshot 2026-03-19 153527" src="https://github.com/user-attachments/assets/79a0c8e0-3e5d-4716-a6d8-fcc1f20373be" />
